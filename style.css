@@ -70,25 +70,29 @@ body {
     font-weight: bold;
 }
 
+.form {
+    width: 100%;
+}
+
 .form > * {
-    padding-left: 32px !important;
+    padding-left: 2rem !important;
 }
 
 .form-heading {
-    padding-bottom: 36px;
+    padding-bottom: 2rem;
 }
 
 .form-inputs {
     display: flex;
 
     background-color: rgb(255, 255, 255);
-    padding: 24px 0;
-
     box-shadow: 0 8px 7px #e8e8e8;
+
+    padding: 24px 0;
 }
 
 .form-inputs-heading {
-    margin-bottom: 16px;
+    margin-bottom: 2rem;
 }
 
 .form-inputs-left {
@@ -128,14 +132,18 @@ input:user-invalid,
 .form-requirements {
     display: flex;
     align-items: center;
+
+    letter-spacing: 0.1rem;
 }
 
 .form-requirements-inner > *::before {
     content: "✅";
+    display: inline;
 }
 
 .req-fail::before {
     content: "❌";
+    display: inline;
 }
 
 input[type="submit"] {
@@ -169,4 +177,49 @@ input[type="submit"]:focus {
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .container,
+    .row,
+    .form-inputs {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin: 0;
+    }
+
+    .form-heading {
+        padding: 2rem;
+    }
+
+    .form-inputs {
+        padding: 1rem;
+    }
+
+    .form-inputs-heading {
+        margin-bottom: 1rem;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .row-left,
+    .row-right {
+        margin: 0.8rem 0;
+    }
+
+    .form-requirements {
+        margin: 1rem 0;
+    }
+
+    .form-requirements-inner > * {
+        margin: 0.4rem 0;
+    }
+
+    .form-submit {
+        margin-bottom: 2rem;
+    }
 }

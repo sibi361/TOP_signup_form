@@ -74,6 +74,7 @@ passConfInput.addEventListener("keyup", () => {
         passConfInput.classList.add("invalid");
         reqMatch.classList.add("req-fail");
     }
+    canSubmitForm = passwordsMatch;
     misc();
 });
 
@@ -82,7 +83,8 @@ const POST_URL = "https://httpbin.org/post";
 
 formEle.addEventListener("submit", (e) => {
     e.preventDefault();
-    submitButton.value = "Create Account ✅";
+    if (canSubmitForm) submitButton.value = "Create Account ✅";
+    else submitButton.value = "Create Account ❌";
 
     console.log(`# Sending form data to ${POST_URL}`);
     const data = new URLSearchParams(new FormData(formEle));
