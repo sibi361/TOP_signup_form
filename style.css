@@ -1,0 +1,172 @@
+:root,
+body {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Norse Bold";
+    src: url("/assets/Norse-Bold.otf") format("opentype");
+}
+
+.italics {
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    display: flex;
+}
+
+.hero {
+    background-image: url("/images/halie-west-25xggax4bSA-unsplash.jpg");
+    background-position: center;
+
+    height: 100vh;
+    flex: 3;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30vh;
+    padding: 16px 0;
+    height: 150px;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo > img {
+    max-height: 150px;
+}
+
+.logo-text {
+    font-family: "Norse Bold";
+    font-size: 7rem;
+    color: white;
+}
+
+.form-container {
+    background: #f9fafb;
+    height: 100vh;
+
+    flex: 5;
+    display: flex;
+    align-items: center;
+}
+
+.form-heading,
+.form-inputs-heading {
+    font-weight: bold;
+}
+
+.form > * {
+    padding-left: 32px !important;
+}
+
+.form-heading {
+    padding-bottom: 36px;
+}
+
+.form-inputs {
+    display: flex;
+
+    background-color: rgb(255, 255, 255);
+    padding: 24px 0;
+
+    box-shadow: 0 8px 7px #e8e8e8;
+}
+
+.form-inputs-heading {
+    margin-bottom: 16px;
+}
+
+.form-inputs-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    margin: 1.3rem 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+label {
+    display: block;
+}
+
+input:not([type="submit"]) {
+    margin-right: 4rem;
+    box-shadow: 0px 0px 5px #e5e7eb;
+    border: 1px solid #e5e7eb;
+    border-radius: 2px;
+}
+
+input:not([type="submit"]):focus {
+    box-shadow: 0px 0px 8px lightblue;
+    border: 1px solid lightblue;
+}
+
+input:user-invalid,
+.invalid {
+    box-shadow: 0px 0px 8px red !important;
+    border: 1px solid red !important;
+}
+
+.form-requirements {
+    display: flex;
+    align-items: center;
+}
+
+.form-requirements-inner > *::before {
+    content: "✅";
+}
+
+.req-fail::before {
+    content: "❌";
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: #596d48;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 36px;
+    border: none;
+    margin: 2rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #63903d;
+}
+
+.login {
+    font-size: 1rem;
+    color: #596d48;
+    cursor: pointer;
+}
+
+.login:hover,
+.login:focus {
+    color: #63903d;
+}
+
+a {
+    text-decoration: none;
+}

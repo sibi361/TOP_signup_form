@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TOP Signup Form</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img
+                            src="/images/odin-lined.png"
+                            alt="The Odin Project Logo"
+                        />
+                    </div>
+                    <div class="logo-text">ODIN</div>
+                </div>
+            </div>
+            <div class="form-container">
+                <form action="#" class="form">
+                    <div class="form-heading">
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams.<br />Sign up
+                        <span class="italics">now</span> to get started.
+                        <br /><br />You <span class="italics">know</span> you
+                        want to.
+                    </div>
+                    <div class="form-inputs">
+                        <div class="form-inputs-left">
+                            <div class="form-inputs-heading">
+                                Let's do this!
+                            </div>
+                            <div class="row">
+                                <div class="row-left">
+                                    <label for="fname">FIRST NAME</label
+                                    ><input
+                                        type="text"
+                                        id="fname"
+                                        name="fname"
+                                        title="Only alphabets allowed"
+                                        pattern="[A-Za-z]+"
+                                        required
+                                    />
+                                </div>
+                                <div class="row-right">
+                                    <label for="lname">LAST NAME</label>
+                                    <input
+                                        type="text"
+                                        id="lname"
+                                        name="lname"
+                                        title="Only alphabets allowed"
+                                        pattern="[A-Za-z]+"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-left">
+                                    <label for="email">EMAIL</label
+                                    ><input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                    />
+                                </div>
+                                <div class="row-right">
+                                    <label for="phone">PHONE NUMBER</label>
+                                    <input
+                                        type="text"
+                                        id="phone"
+                                        name="phone"
+                                        title="should be 10 digits for eg: 9876543210"
+                                        pattern="\d{10}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-left">
+                                    <label for="password">PASSWORD</label
+                                    ><input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        maxlength="64"
+                                        required
+                                    />
+                                </div>
+                                <div class="row-right">
+                                    <label for="passwordConf"
+                                        >CONFIRM PASSWORD</label
+                                    ><input
+                                        type="password"
+                                        id="passwordConf"
+                                        name="passwordConf"
+                                        maxlength="64"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-requirements hidden">
+                            <div class="form-requirements-inner">
+                                Password requirements:
+                                <div class="row req-fail" id="reqLen">
+                                    &nbsp;Minimum 8 characters long
+                                </div>
+                                <div class="row req-fail" id="reqLetter">
+                                    &nbsp;Contains at least one character
+                                </div>
+                                <div class="row req-fail" id="reqNum">
+                                    &nbsp;Contains at least one number
+                                </div>
+                                <div class="row req-fail" id="reqSym">
+                                    &nbsp;Contains at least one symbol<br />
+                                    (!@#$%^&*()\-_+.)
+                                </div>
+                                <div class="row req-fail" id="reqMatch">
+                                    &nbsp;Both passwords should match
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Create Account" />
+                        Already have an account?
+                        <a href="#"><span class="login">Log in</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
